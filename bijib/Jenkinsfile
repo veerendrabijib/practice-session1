@@ -19,7 +19,7 @@ pipeline {
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
                 reportDir: 'bijib',
-                reportFiles: 'demo.html,style.css',
+                reportFiles: 'demo.html,style.css,script.js',
                 reportName: 'Demo HTML Page',
                 useWrapperFileDirectly: true
                  ])
