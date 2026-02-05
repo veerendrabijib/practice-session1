@@ -13,6 +13,13 @@ pipeline {
     }
 
     post {
+        always {
+            publishHTML([
+                reportDir: '.',          
+                reportFiles: 'demo.html',
+                reportName: 'Demo HTML Page'
+            ])
+        }
         success {
             echo 'Build Successful'
         }
