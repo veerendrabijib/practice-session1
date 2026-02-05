@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git branch: 'bug-002',
+                    url: 'https://github.com/veerendrabijib/practice-session1.git'
+            }
+        }
+
+    }
+
+    post {
+        success {
+            echo '✅ Build Successful'
+        }
+        failure {
+            echo '❌ Build Failed'
+        }
+    }
+}
