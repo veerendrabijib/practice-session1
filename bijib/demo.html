@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample HTML Page</title>
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <div class="card">
         <h1>Welcome</h1>
         <p>This is a sample HTML file.</p>
-        <button onclick="showAlert()">Click Me</button>
+
+        <!-- removed onclick -->
+        <button id="clickBtn">Click Me</button>
     </div>
 
 </body>
