@@ -15,13 +15,15 @@ pipeline {
     post {
         always {
             publishHTML([
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: '.',
-                reportFiles: 'demo.html',
-                reportName: 'Demo HTML Page'
-            ])
+    allowMissing: false,
+    alwaysLinkToLastBuild: true,
+    keepAll: true,
+    reportDir: '.',
+    reportFiles: 'demo.html',
+    reportName: 'Demo HTML Page',
+    reportTitles: 'Demo HTML Page'
+      ])
+
         }
         success {
             echo 'Build Successful'
