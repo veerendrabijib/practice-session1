@@ -15,14 +15,18 @@ pipeline {
     post {
         always {
             publishHTML([
-    allowMissing: false,
-    alwaysLinkToLastBuild: true,
-    keepAll: true,
-    reportDir: '.',
-    reportFiles: 'demo.html',
-    reportName: 'Demo HTML Page',
-    reportTitles: 'Demo HTML Page'
-      ])
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+
+                // IMPORTANT FIX
+                reportDir: 'bijib',
+                reportFiles: 'demo.html',
+                reportName: 'Demo HTML Page',
+
+                // BYPASS JENKINS WRAPPER
+                useWrapperFileDirectly: true
+                 ])
 
         }
         success {
