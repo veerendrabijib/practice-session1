@@ -18,13 +18,9 @@ pipeline {
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-
-                // IMPORTANT FIX
                 reportDir: 'bijib',
-                reportFiles: 'demo.html',
+                reportFiles: 'demo.html,style.css',
                 reportName: 'Demo HTML Page',
-
-                // BYPASS JENKINS WRAPPER
                 useWrapperFileDirectly: true
                  ])
 
